@@ -1,22 +1,15 @@
 <?php 
 
-interface User
-{
+interface User{
     public function getName(): string;
 }
 
-interface Admin extends User
-{
-
+interface Admin extends User{
     public function JsonResponse(): string;
 }
 
-interface SuperAdmin  extends Admin
-{
-   
+interface SuperAdmin  extends Admin{ 
 }
-
-
 
 class Users  {
  	 
@@ -26,7 +19,6 @@ class Users  {
 
     public function getName(): string
 	{	
- 
 	    return $this->name;
 	}
 
@@ -34,23 +26,19 @@ class Users  {
 		$this->j =  json_encode($this->json);
 		//echo gettype($j);
 		return $this->j;
-	    
 	}
-
 }
 
 
-function fetchUserName(Users $user): string //(Admin&SuperAdmin) | Users $user ????
-{
+function fetchUserName(Users $user): string { //(Admin&SuperAdmin) | Users $user ????
+
      $user->getName();
      $user->JsonResponse();
- 
      return $user->name . $user->j; 
 }
 
 $user = new Users();
 $user->name = "Joe";
-
 $array = ["name"=>"Mary","Surname"=>"Rossi"];
 
 //var_dump($array);die;
@@ -58,13 +46,6 @@ $array = ["name"=>"Mary","Surname"=>"Rossi"];
 $user->json = $array; 
 
 echo fetchUserName($user);
-
-
-
-
-
-
-
 
 // PHP Fatal error:  Uncaught TypeError: fetchUserName(): 
 // Argument #1 ($user) must be of type (Admin&SuperAdmin)|User, Admin@anonymous given
