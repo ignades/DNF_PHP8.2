@@ -1,5 +1,52 @@
 <?php 
 
+//Ejemplo 1 mi duda decomentenlo!
+
+/*
+
+interface A {
+ public function test():string;
+}
+interface B {
+ public function test2():string;
+}
+interface AB extends A, B {}
+ 
+class Test implements A, B {
+
+	public $v;
+
+	public function __construct(){
+		$this->v = 123;
+	}
+
+	public function test():string{
+		return $this->v;
+
+	}
+	public function test2():string{
+
+	}
+}
+ 
+function foo((A&B) | null $v) {
+    var_dump($v);
+    echo gettype($v->v);
+    echo $v->v;
+}
+ 
+foo(new Test());
+
+*/
+
+//mis dudas son: defino las interfaces que por simismo me obligan a utilizar el metodo test y test2 y eso esta claro
+//ahora lo que estoy haciendo es decir en la linea 28 es : combina A&B y si es verdad que $v es un string segui adelante o si $v es null hace algo correcto?
+
+//pero como se ve en el var_dump es un int entonces porque no me da error si A&B obligan el string? 
+
+
+//Ejemplo de test 2
+/* 
 interface User{
     public function getName(): string;
 }
@@ -47,5 +94,5 @@ $user->json = $array;
 
 echo fetchUserName($user);
 
-// PHP Fatal error:  Uncaught TypeError: fetchUserName(): 
-// Argument #1 ($user) must be of type (Admin&SuperAdmin)|User, Admin@anonymous given
+*/
+
