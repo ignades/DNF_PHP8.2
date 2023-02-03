@@ -4,6 +4,7 @@
 //Ejemplo 1 mi duda descomenten e caso 1 lo analizamos y luego vemos el caso 2 Gracias antetodo por dedicarme tiempo Ariel!
 //Linea 43 dudas y preguntas de ejemplo 1
 //Linea 53 dudas y preguntas de ejemplo 2
+//Linea 107 dudas y preguntas de ejemplo 3
 
 /*
 
@@ -101,5 +102,44 @@ echo fetchUserName($user);
 
 */
 
+
+// Ejemplo 3 
+// Nunca è declarado una Variable asi linea 121 
+// como funciona? sorry!
+
+/*
+
+interface X {}
+
+interface Y {}
+
+class Something implements X, Y {}
+
+
+class AnotherThing implements X {}
+
+
+class User {
+  public X&Y $xAndY;
+
+  public function foo (X&Y $param): X&Y{
+    return $param;
+  }
+}
+
+$something = new Something;
+$anotherThing = new AnotherThing;
+
+$user = new User;
+
+$user->xAndY = $something; // works
+$user->xAndY = $anotherThing; // doesn't work, because anotherThing is not both X and Y
+
+$user->foo($something); // works, because something is both X and Y
+$user->foo($anotherThing); // doesn't work
+
+// returns types follow the same rule, foo() can only return value that is both X and Y
+
+*/
 
 
