@@ -1,6 +1,7 @@
 <?php 
+// Hola chicos Muestro 2 ejemplos que hice con mis preguntas y mis dudas"
 
-//Ejemplo 1 mi duda decomentenlo!
+//Ejemplo 1 mi duda descomenten e caso 1 lo analizamos y luego vemos el caso 2 Gracias antetodo por dedicarme tiempo Ariel!
 
 /*
 
@@ -46,7 +47,10 @@ foo(new Test());
 
 
 //Ejemplo de test 2
-/* 
+
+// En este caso estoy quitando la implementaciòn de implements Admin, SuperAdmin y en la linea 82 Admin&SuperAdmin) no recibo error algo se me escapa! ??
+
+/*
 interface User{
     public function getName(): string;
 }
@@ -58,7 +62,7 @@ interface Admin extends User{
 interface SuperAdmin  extends Admin{ 
 }
 
-class Users  {
+class Users  { // implements User,Admin
  	 
  	public string $name;
  	public array $json;
@@ -76,8 +80,7 @@ class Users  {
 	}
 }
 
-
-function fetchUserName(Users $user): string { //(Admin&SuperAdmin) | Users $user ????
+function fetchUserName((Admin&SuperAdmin) | int $user): string { //(Admin&SuperAdmin) | Users $user ????
 
      $user->getName();
      $user->JsonResponse();
@@ -95,4 +98,6 @@ $user->json = $array;
 echo fetchUserName($user);
 
 */
+
+
 
