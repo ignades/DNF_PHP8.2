@@ -2,6 +2,8 @@
 // Hola chicos Muestro 2 ejemplos que hice con mis preguntas y mis dudas"
 
 //Ejemplo 1 mi duda descomenten e caso 1 lo analizamos y luego vemos el caso 2 Gracias antetodo por dedicarme tiempo Ariel!
+//Linea 43 dudas y preguntas de ejemplo 1
+//Linea 53 dudas y preguntas de ejemplo 2
 
 /*
 
